@@ -31,10 +31,13 @@ namespace ExemploExplorando.Models
             if(Alunos.Any())
             {
                 Console.WriteLine($"Os alunos matriculados no curso {Nome} são: ");
-                foreach(Pessoa aluno in Alunos)
+
+                for (int count = 0; count < Alunos.Count; count++)
                 {
-                    Console.WriteLine($"{aluno.NomeCompleto}");
-                } 
+                    string texto = $"Número {count + 1} - {Alunos[count].NomeCompleto}";
+                    Console.WriteLine(texto);
+                }
+               
             } else {
                 Console.WriteLine("Não há alunos cadastrados.");
             }
